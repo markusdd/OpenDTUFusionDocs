@@ -16,7 +16,7 @@ The common solutions to buy seperate modules, soldering pin headers and using ad
 So, with OpenDTU Fusion you get:
 
 - no soldering of pin headers, or any parts of any kind
-- a very compact form factor of just 5.5cm² to fit in your favorite case
+- a very compact form factor of just 5.5cm x 5.5cm to fit in your favorite case
 - proper RF path layout and parts according to the manufacturer datasheets with proper thermal design, impedance matching etc.
 - full antenna flexibility though U.FL/IPEX connectors: from a small PCB antenna adhered to your case to the full +8dBi external powerhouse everything is possible to fit your application
 - full feature set of the ESP32-S3, flash/debug/monitor just by using a single USB-C cable
