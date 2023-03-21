@@ -5,7 +5,7 @@
 OpenDTU Fusion is a very dense and small board which combines an
 Espressif ESP32-S3-WROOM-1U module together with a
 Nordic NRF24LP01+ and Skyworks RX2401C low noise amplifier to provide
-a stable hardware base for OpenDTU and AhoyDTU opensource firmwares
+a stable hardware base for [OpenDTU](https://github.com/tbnobody/OpenDTU) and [AhoyDTU](https://github.com/lumapu/ahoy) opensource firmwares
 to monitor and control Hoymiles HM solar inverters (as well as their
 technically similar cousins like some Solenso or TSUN models).
 
