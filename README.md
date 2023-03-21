@@ -116,7 +116,7 @@ If you have multiple devices make sure to select the correct one in VS Code:
 
 ## Displays
 
-As described above, the OpenDTUE Fusion PCB supports all displays on hardware side that can be supported by Open/AhoyDTU on software side, like this 128x64 OLED I2C display with SSD1306 controller.
+As described above, the OpenDTU Fusion PCB supports all displays on hardware side that can be supported by Open/AhoyDTU on software side, like this 128x64 OLED I2C display with SSD1306 controller.
 
 ![DisplayOn](pics/DisplayOn.png)
 
