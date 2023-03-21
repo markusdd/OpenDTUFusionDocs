@@ -91,7 +91,7 @@ In VSCode, when building for this board, make sure to use the correct profile:
 
 ![VSCode](pics/VSCode.png)
 
-When you then choose 'upload', it should look like this. The initial errors are normal as the board might not have anything flashed to it or the Fcurrent Firmware is an incompatible version, so attaching the debugger fails, which is ok.
+When you then choose 'upload', it should look like this. The initial errors are normal as the board might not have anything flashed to it or the current Firmware is an incompatible version, so attaching the debugger fails, which is ok.
 We just want the flashing to proceed, so look for `** Programming started **` and a `SUCCESS` at the end:
 
 ![ProgrammingSuccess](pics/ProgrammingSuccess.png)
