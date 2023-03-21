@@ -183,7 +183,7 @@ For the debug device, make sure not the generic windows driver is used, but the 
 
 ![VerifyEspressifDriver](pics/VerifyEspressifDriver.png)
 
-If this is not the case, choose 'Update Driver' and then 'automatically'. When you installed the Espressif drivers as instructed, it shoudl switch to it. If if doesn't, do the manual selection.
+If this is not the case, choose 'Update Driver' and then 'automatically'. When you installed the Espressif drivers as instructed, it should switch to it. If it doesn't, do the manual selection.
 
 ![AutomaticallySelectDriver](pics/AutomaticallySelectDriver.png)
 
