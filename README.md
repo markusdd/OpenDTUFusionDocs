@@ -197,7 +197,7 @@ Executing `lsusb` should return something like this when the boards is connected
 
 If not, check if libusb, openocd and other Linux dependencies listed by Espressif are installed.
 
-Also, make sure you are in the proper group for /dev/tty* access as a user. often it is 'dialout', but can be different on other distributions:
+Also, make sure you are in the proper group for /dev/tty* access as a user. Often it is 'dialout', but can be different on other distributions:
 
 ![TTYACMDialoutGroup](pics/TTYACMDialoutGroup.png)
 
