@@ -65,10 +65,10 @@ Get a powershell and download the driver installer as described by [Espressif](h
 Invoke-WebRequest 'https://dl.espressif.com/dl/idf-env/idf-env.exe' -OutFile .\idf-env.exe; .\idf-env.exe driver install --espressif
 ```
 
-![DriverInstall](pics\DriverInstall.png)
+![DriverInstall](pics/DriverInstall.png)
 
 Then confirm the install
-![InstallDialog](pics\InstallDialog.png)
+![InstallDialog](pics/InstallDialog.png)
 
 ### Linux Permissions
 
@@ -85,16 +85,16 @@ If this is not the case for your distro, follow the guide by [Espressif](<https:
 
 This should have put the bootloader in flashing mode and the device should show up in your OS and you can flash, debug and monitor.
 
-![USBSetup](pics\USBSetup.png)
+![USBSetup](pics/USBSetup.png)
 
 In VSCode, when building for this board, make sure to use the correct profile:
 
-![VSCode](pics\VSCode.png)
+![VSCode](pics/VSCode.png)
 
 When you then choose 'upload', it should look like this. The initial errors are normal as the board might not have anything flashed to it or the Fcurrent Firmware is an incompatible version, so attaching the debugger fails, which is ok.
 We just want the flashing to proceed, so look for `** Programming started **` and a `SUCCESS` at the end:
 
-![ProgrammingSuccess](pics\ProgrammingSuccess.png)
+![ProgrammingSuccess](pics/ProgrammingSuccess.png)
 
 After this has finished, press the reset button on the board or do a power cycle.
 After a short period, the generic OpenDTU access point should show up in your Wifi search,
@@ -102,29 +102,29 @@ where you can then connect and perform the setup as documented by Open/AhoyDTU (
 
 This should work even without an antenna attached if you are close by with your e.g. phone.
 
-![AP](pics\AP.png)
+![AP](pics/AP.png)
 
 Here you can then enter your own Wifi and proceed:
-![APSetup](pics\APSetup.png)
+![APSetup](pics/APSetup.png)
 
 ## Print Console
 
 If your driver setup is correct the print console should just work.
 If you have multiple devices make sure to select the correct one in VS Code:
 
-![COMPortSelection](pics\COMPortSelection.png)
+![COMPortSelection](pics/COMPortSelection.png)
 
 ## Displays
 
 As described above, the OpenDTUE Fusion PCB supports all displays on hardware side that can be supported by Open/AhoyDTU on software side, like this 128x64 OLED I2C display with SSD1306 controller.
 
-![DisplayOn](pics\DisplayOn.png)
+![DisplayOn](pics/DisplayOn.png)
 
 ### Wiring up the display
 
 First, make sure to wire your display up correctly, the silkscreen on the PCB shows the pin designations. Be especially careful not to switch GND and VDD/3V3:
 
-![I2CWiring](pics\I2CWiring.png)
+![I2CWiring](pics/I2CWiring.png)
 
 The same goes for SPI displays, make sure your pinout is correct and you do it while the board is off.
 
@@ -132,40 +132,40 @@ The same goes for SPI displays, make sure your pinout is correct and you do it w
 
 Navigate to Config Management
 
-![OpenDTUConfigManagement](pics\OpenDTUConfigManagement.png)
+![OpenDTUConfigManagement](pics/OpenDTUConfigManagement.png)
 
 and choose pin mapping as the restore item
 
-![PinMapping](pics\PinMapping.png)
+![PinMapping](pics/PinMapping.png)
 
 and select the file for the OpenDTU Fusion PCB from the repo or your custom file.
 The ESP32-S3 can map any GPIO pretty much anywhere, so if you want to use one of the other headers go ahead. Just make sure to not accidently use pins that are occupied by other functions. Refer to the mapping list at the very bottom of this document.
 
-![DeviceProfile](pics\DeviceProfile.png)
+![DeviceProfile](pics/DeviceProfile.png)
 
 Then choose 'Restore'.
 
-![DeviceProfileRestore](pics\DeviceProfileRestore.png)
+![DeviceProfileRestore](pics/DeviceProfileRestore.png)
 
 ### Selecting the Profile
 
 Navigate to 'Device Manager' in the settings menu and select your profile:
 
-![DeviceManagerPinout](pics\DeviceManagerPinout.png)
+![DeviceManagerPinout](pics/DeviceManagerPinout.png)
 
 Scroll to the bottom and save it.
 
-![DeviceManagerPinoutSave](pics\DeviceManagerPinoutSave.png)
+![DeviceManagerPinoutSave](pics/DeviceManagerPinoutSave.png)
 
 Now you can go to the 'Display' tab and adjust the different modes and options.
 
-![DisplaySettings](pics\DisplaySettings.png)
+![DisplaySettings](pics/DisplaySettings.png)
 
 ## Troubleshooting
 
 When trying to flash you might see something like this:
 
-![UploadError](pics\UploadError.png)
+![UploadError](pics/UploadError.png)
 
 This might indicate that:
 
@@ -177,15 +177,15 @@ This might indicate that:
 
 Check, when board is connected and in bootloader-mode, that what you see in Device Manager is similar to this. There should be one generic COM port (number might differ) and a JTAG/Debug device.
 
-![DeviceManager](pics\DeviceManager.png)
+![DeviceManager](pics/DeviceManager.png)
 
 For the debug device, make sure not the generic windows driver is used, but the one from Espressif:
 
-![VerifyEspressifDriver](pics\VerifyEspressifDriver.png)
+![VerifyEspressifDriver](pics/VerifyEspressifDriver.png)
 
 If this is not the case, choose 'Update Driver' and then 'automatically'. When you installed the Espressif drivers as instructed, it shoudl switch to it. If if doesn't, do the manual selection.
 
-![AutomaticallySelectDriver](pics\AutomaticallySelectDriver.png)
+![AutomaticallySelectDriver](pics/AutomaticallySelectDriver.png)
 
 For the COM port, it should just be the generic Windows serial device driver.
 
@@ -193,13 +193,13 @@ For the COM port, it should just be the generic Windows serial device driver.
 
 Executing `lsusb` should return something like this when the boards is connected:
 
-![lsusbEspressifDebug](pics\lsusbEspressifDebug.png)
+![lsusbEspressifDebug](pics/lsusbEspressifDebug.png)
 
 If not, check if libusb, openocd and other Linux dependencies listed by Espressif are installed.
 
 Also, make sure you are in the proper group for /dev/tty* access as a user. often it is 'dialout', but can be different on other distributions:
 
-![TTYACMDialoutGroup](pics\TTYACMDialoutGroup.png)
+![TTYACMDialoutGroup](pics/TTYACMDialoutGroup.png)
 
 If not, you can run
 
