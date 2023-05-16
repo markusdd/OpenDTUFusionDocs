@@ -209,13 +209,15 @@ sudo usermod -a -G <group, e.g. dialout> <your username>
 
  and then re-login for it to become effective.
 
-## Pin mapping of the ESP32-S3 on OpenDTU Fusion
+## Pin mapping of the ESP32-S3 on OpenDTU Fusion v2.x
 
 The ESP32-S3 can map any GPIO function pretty much anywhere through firmware, but this is strictly for advanced users and developers who know what they are doing. So be warned, you are on your own from here.
 
 Please note that the display SPI pin names are derived from typical eInk displays that are available, the naming and function might differ for other models. Check the function mapping
 with the proper OpenDTU/AhoyDTU version that has support for those special displays.
 In general, these pins can be used for any arbitrary funtion, just like the ones on the I2C, UART and JTAG headers.
+
+**ATTENTION**: When both CMT2300A and NRF24 RF modules are in use, the SPI display header currently cannot be used until ahoy and/or openDTU update the code to support 2 devices on the NRF SPI bus. The ESP only has 2 externally available SPIs.
 
 The ESP32-S3 has many amazing internal peripherals that can be brought out, either with simple GPIO-functions or for sensors, touch, etc.
 See the databook for all details.
@@ -225,25 +227,25 @@ See the databook for all details.
 |GPIO0 |no|Boot button|ESP32-S3 special strapping pin|
 |GPIO1 |yes|SCL|on I2C header|
 |GPIO2 |yes|SDA|on I2C header|
-|GPIO3 |no|n/a (open pin)|ESP32-S3 special strapping pin|
-|GPIO4 |no|n/a (open pin)|reserved for future v2 board features|
-|GPIO5 |no|n/a (open pin)|reserved for future v2 board features|
-|GPIO6 |no|n/a (open pin)|reserved for future v2 board features|
-|GPIO7 |no|n/a (open pin)|reserved for future v2 board features|
-|GPIO8 |no|n/a (open pin)|reserved for future v2 board features|
+|GPIO3 |no|GPIO2 CMT|hardwired to CMT2300A RF (strapping pin, do not burn JTAG sel efuse!)|
+|GPIO4 |no|CSB CMT|hardwired to CMT2300A RF|
+|GPIO5 |no|SDIO CMT|hardwired to CMT2300A RF|
+|GPIO6 |no|SCLK CMT|hardwired to CMT2300A RF|
+|GPIO7 |no|GPIO1 CMT|hardwired to CMT2300A RF|
+|GPIO8 |no|GPIO3 CMT|hardwired to CMT2300A RF|
 |GPIO9 |yes|MOSI display|on SPI display header|
 |GPIO10|yes|SCK display|on SPI display header|
 |GPIO11|yes|CSN display|on SPI display header|
 |GPIO12|yes|DC display|on SPI display header|
 |GPIO13|yes|RST display|on SPI display header|
 |GPIO14|yes|MISO (busy) display|on SPI display header|
-|GPIO15|no|XTAL_32k_P|RTC 32kHz crystal|
-|GPIO16|no|XTAL_32k_N|RTC 32kHz crystal|
+|GPIO15|no|RE_N RS485|hardwired to RS485 transceiver|
+|GPIO16|no|R RS485|hardwired to RS485 transceiver|
 |GPIO17|no|D2 (MQTT) blue LED|connected by R12 560 Ohm resistor|
-|GPIO18|no|D3 (INV ON) white LED|connected by R13 820 Ohm resistor|
+|GPIO18|no|D3 (INV ON) white LED|connected by R13 3.3k Ohm resistor|
 |GPIO19|no|USB_D-|USB differential data line|
 |GPIO20|no|USB_D+|USB differential data line|
-|GPIO21|no|n/a (open pin)|reserved for future v2 board features|
+|GPIO21|no|FSCB CMT|hardwired to CMT2300A RF|
 |GPIO22|no|n/a (not exposed)|used inside ESP32-S3-WROOM-1U module|
 |GPIO23|no|n/a (not exposed)|used inside ESP32-S3-WROOM-1U module|
 |GPIO24|no|n/a (not exposed)|used inside ESP32-S3-WROOM-1U module|
@@ -267,7 +269,7 @@ See the databook for all details.
 |GPIO42|yes|TMS|ESP32-S3 default JTAG pins|
 |GPIO43|yes|UART_TX|ESP32-S3 default serial console|
 |GPIO44|yes|UART_RX|ESP32-S3 default serial console|
-|GPIO45|no|n/a (open pin)|ESP32-S3 special strapping pin|
-|GPIO46|no|n/a (open pin)|ESP32-S3 special strapping pin|
+|GPIO45|no|D RS485|hardwired to RS485 transceiver (strapping pin, pull-down 100k Ohm)|
+|GPIO46|no|DE RS485|hardwired to RS485 transceiver (strapping pin, pull-up 10k Ohm)|
 |GPIO47|no|IRQ NRF24|hardwired to Nordic RF|
 |GPIO48|no|MISO NRF24|hardwired to Nordic RF|
