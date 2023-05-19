@@ -28,7 +28,7 @@ Many thanks to the OpenDTU/AhoyDTU community for providing reviews, testing and 
 See this picture for the awesome features that this little board provides:
 ![overview](pics/overview.png)
 
-- Size: 5.5cm x 5.5cm, 4x M3 corner mounting holes (46mm pitch)
+- Size: 5.5cm x 5.5cm, 4x M3 corner mounting holes (46mm pitch) (if you wish to design a case for this PCB yourself a 3D model step file is available [here](3d\OpenDTUFusion2.step))
 - Power: 5V via USB-C or 5 DC via screw terminal, selectable by a 2.54mm jumper
 - Wireless: UF.L/IPEX Antenna connectors to enable you to either use self-adhering PCB-Antennas or SMA-antennas outside your case for best send/receive performance
 (IMPORTANT: these are full-size U.FL/IPEX connectors, not the 'mini' versions found on some newer laptop Wifi cards, which are often called U.FL/IPEX/MHF 4 or Gen4)
@@ -57,6 +57,10 @@ They are for ESP32, not ESP32-S3 and will not work until there is a dedicated ge
 
 The R16 resistor is a not populated 0805 SMD footprint connected to the A and B RS485 lines.
 It can be used to place an optional 120 Ohm termination resistor if that is desired for the application.
+
+If you wish to write software yourself for this board or do some more advanced things a
+detailed pin-out is available at the bottom of this document.
+For all others, it is recommended to use the pre-configured build targets and device profile files in ahoy and openDTU for this board, which contain the correct pinout already.
 
 ## Setup USB Driver and permissions
 
@@ -87,7 +91,9 @@ If this is not the case for your distro, follow the guide by [Espressif](<https:
 3) verify the 3V3 power indicator LED comes on
 4) press and hold the boot button
 5) simultaniously press the reset button, afterwards you can release boot
-6-8) make sure to connect the antennas (if you don't have a certain inverter series in use, you might either omit the NRF (HM series) or CMT (HMS/HMT series) antenna)
+6) make sure to connect the Wifi antenna
+7) if you have a HM series inverter in use (or some compatible TSUN model) it requires NRF24 functionality, so connect this antenna
+8) if you have a HMS/HMT series inverter in use, connect the CMT antenna here
 
 This should have put the bootloader in flashing mode and the device should show up in your OS and you can flash, debug and monitor.
 
