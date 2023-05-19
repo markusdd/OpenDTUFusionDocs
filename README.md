@@ -4,14 +4,14 @@
 
 OpenDTU Fusion is a very dense and small board which combines an
 Espressif ESP32-S3-WROOM-1U module together with a
-Nordic NRF24LP01+ and Skyworks RX2401C low noise amplifier to provide
-a stable hardware base for [OpenDTU](https://github.com/tbnobody/OpenDTU) and [AhoyDTU](https://github.com/lumapu/ahoy) opensource firmwares
-to monitor and control Hoymiles HM solar inverters (as well as their
+Nordic NRF24LP01+, Skyworks RX2401C low noise amplifier in the 2.4GHz band and a CMT2300A 868MHz RF to provide a stable hardware base for [OpenDTU](https://github.com/tbnobody/OpenDTU) and [AhoyDTU](https://github.com/lumapu/ahoy) opensource firmwares
+to monitor and control Hoymiles HM, HMS and HMT solar inverters (as well as their
 technically similar cousins like some Solenso or TSUN models).
 
 Why another Open/AhoyDTU PCB you might ask?
 
 The common solutions to buy seperate modules, soldering pin headers and using adapter PCBs are totally fine, but many people have issues with them. They might not be into electronics, but don't want to buy an expensive Hoymiles DTU, which costs a lot of money and forces you to use their cloud service. Some of the cheap NRF24 modules use fake chips that have issues, they cheap out on the RF design, and the PCB antennas meet their limits when there is more than 1 or 2 walls in the way. Some leave out the amplifier, further incerasing issues with reception performance.
+With version 2, which integrates the NRF and CMT RF modules, you even get something not even Hoymiles has themselves: You have one super compact device that can work with all inverter series they offer, no matter if they use the 2.4GHz or 868MHz type communication.
 
 So, with OpenDTU Fusion you get:
 
@@ -29,17 +29,19 @@ See this picture for the awesome features that this little board provides:
 ![overview](pics/overview.png)
 
 - Size: 5.5cm x 5.5cm, 4x M3 corner mounting holes (46mm pitch)
-- Power: 5V via USB-C or 5-12V DC via screw terminal, selectable by 2.54mm jumper
-- Wireless: UF.L/IPEX Antenna connectors to enable you to either use self-adhering PCB-Antennas or proper SMA-antennas outside your case for best send/receive performance
-(IMPORTANT: these are full-size U.FL/IPEX connectors, not the 'mini' versions found on some laptop Wifi cards, which are often called U.FL/IPEX/MHF 4 or Gen4)
+- Power: 5V via USB-C or 5 DC via screw terminal, selectable by a 2.54mm jumper
+- Wireless: UF.L/IPEX Antenna connectors to enable you to either use self-adhering PCB-Antennas or SMA-antennas outside your case for best send/receive performance
+(IMPORTANT: these are full-size U.FL/IPEX connectors, not the 'mini' versions found on some newer laptop Wifi cards, which are often called U.FL/IPEX/MHF 4 or Gen4)
 - USB-C connector with proper ESD-protection that provides all-in-one flashing/debugging/console monitor and power supply, no more extra USB/UART bridges or debug cables/probes required
 - power supply secured by a self-resetting fuse should stuff go wrong -> no more soldering of SMD-Fuses to replace them
+- a high-quality (Renesas ISL3178E or Texas Instruments THVD1429DR) half-duplex RS485 Transceiver for e.g. Modbus applications
 - 2 programmable LEDs connected directly to two of the ESP32-S3 GPIOs and a power indicator LED
-- reverse polarity protection on the 5-12V DC screw terminal
+- reverse polarity protection on the 5V DC screw terminal
 - all the pin headers you will need:
   - I2C for sensors or displays
   - SPI header for e.g. eInk displays including 2 GPIO control lines
   - UART and JTAG header for classic access to flashing, monitoring console and debug (can also be used for other general purposes in software)
+  - RS485 header to connect the A and B lines
 
 ## IMPORTANT Application Notes
 
@@ -51,7 +53,10 @@ especially the more modern ESP32-S3 chip and its integrated USB-interface.
 For how to generally build/deploy the DTU firmwares and using them, refer to the original projects above.
 
 **BUT**: Do NOT use the generic firmware builds provided by OpenDTU with the Windows flasher tool approach.
-They are for ESP32, not ESP32-S3 and will not work until there is a dedicated generic build for ESP32-S3.
+They are for ESP32, not ESP32-S3 and will not work until there is a dedicated generic build for ESP32-S3. With ahoy, make sure you use the builds for the S3, not the non-S ESP32 or ESP8266.
+
+The R16 resistor is a not populated 0805 SMD footprint connected to the A and B RS485 lines.
+It can be used to place an optional 120 Ohm termination resistor if that is desired for the application.
 
 ## Setup USB Driver and permissions
 
@@ -77,17 +82,18 @@ If this is not the case for your distro, follow the guide by [Espressif](<https:
 
 ## Setting up the Board
 
-1) make sure the power jumper is set to USB or your 5-12V DC power source is connected
+1) make sure the power jumper is set to USB or your 5 DC power source
 2) now plug in the board
 3) verify the 3V3 power indicator LED comes on
 4) press and hold the boot button
 5) simultaniously press the reset button, afterwards you can release boot
+6-8) make sure to connect the antennas (if you don't have a certain inverter series in use, you might either omit the NRF (HM series) or CMT (HMS/HMT series) antenna)
 
 This should have put the bootloader in flashing mode and the device should show up in your OS and you can flash, debug and monitor.
 
 ![USBSetup](pics/USBSetup.png)
 
-In VSCode, when building for this board, make sure to use the correct profile:
+In VSCode, when building for this board, make sure to use the correct profile opendtufusionv1 or v2 depending on which one you have, for most people it will be at least v2 as v1 was not publicly available outside community development:
 
 ![VSCode](pics/VSCode.png)
 
@@ -99,8 +105,6 @@ We just want the flashing to proceed, so look for `** Programming started **` an
 After this has finished, press the reset button on the board or do a power cycle.
 After a short period, the generic OpenDTU access point should show up in your Wifi search,
 where you can then connect and perform the setup as documented by Open/AhoyDTU (the number will change with every board).
-
-This should work even without an antenna attached if you are close by with your e.g. phone.
 
 ![AP](pics/AP.png)
 
