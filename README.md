@@ -28,7 +28,7 @@ Many thanks to the OpenDTU/AhoyDTU community for providing reviews, testing and 
 See this picture for the awesome features that this little board provides:
 ![overview](pics/overview.png)
 
-- Size: 5.5cm x 5.5cm, 4x M3 corner mounting holes (46mm pitch) (if you wish to design a case for this PCB yourself a 3D model step file is available [here](3d\OpenDTUFusion2.step))
+- Size: 5.5cm x 5.5cm, 4x M3 corner mounting holes (46mm pitch) (if you wish to design a case for this PCB yourself a 3D model step file is available [here](3d/OpenDTUFusion2.step))
 - Power: 5V via USB-C or 5 DC via screw terminal, selectable by a 2.54mm jumper
 - Wireless: UF.L/IPEX Antenna connectors to enable you to either use self-adhering PCB-Antennas or SMA-antennas outside your case for best send/receive performance
 (IMPORTANT: these are full-size U.FL/IPEX connectors, not the 'mini' versions found on some newer laptop Wifi cards, which are often called U.FL/IPEX/MHF 4 or Gen4)
