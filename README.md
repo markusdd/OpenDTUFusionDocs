@@ -2,6 +2,14 @@
 
 ![overview](pics/overview.png)
 
+## Where to get?
+
+You can buy the OpenDTU Fusion board (and fitting 3D-printed cases when you don't want to build your own) at the AllianceApps Community Shop here:
+<https://shop.allianceapps.io/products/opendtu-fusion-community-edition>
+
+Simple 800MHz-2.6GHz wideband PCB Antennas are included and sufficient for most users. Later also a variant with external SMA-Antennas will be available if you have deep coverage requirements.
+Meanwhile you can have this by ordering the U.FL-SMA-pigtails and Antennas yourself, you need 1x 2.4GHz for Wifi, 1x 2.4GHz for the NRF24 (for HM Series) and one 868MHz Antenna for the CMT2300A-RF (HMS/HMT series). If you only operate one type of inverter series, you can leave the not needed antenna port unpopulated.
+
 ## Summary
 
 OpenDTU Fusion is a very dense and small board which combines an
