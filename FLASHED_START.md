@@ -19,7 +19,9 @@ and choose pin mapping as the restore item
 ![PinMapping](pics/PinMapping.png)
 
 and select the file for the OpenDTU Fusion PCB from the repo or your custom file.
-The official latest device profile is to be found here: <https://github.com/tbnobody/OpenDTU/blob/master/docs/DeviceProfiles/opendtu_fusion.json>
+The official latest device profile is to be found here (use "download raw file" button in upper right corner of the file viewer to download): <https://github.com/tbnobody/OpenDTU/blob/master/docs/DeviceProfiles/opendtu_fusion.json>
+
+Alternative link to raw, downloadable file (right click, Save Target As...): <https://raw.githubusercontent.com/tbnobody/OpenDTU/master/docs/DeviceProfiles/opendtu_fusion.json>
 
 The ESP32-S3 can map any GPIO pretty much anywhere, so if you want to use one of the other headers go ahead. Just make sure to not accidently use pins that are occupied by other functions. Refer to the mapping list at the very bottom of the main [README.md](README.md).
 
