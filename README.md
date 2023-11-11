@@ -1,5 +1,7 @@
 # OpenDTU Fusion Documentation
 
+HINT: For the new PoE extension shield click [here](POE.md).
+
 ![overview](pics/overview.png)
 
 ## Where to get?
