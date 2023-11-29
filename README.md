@@ -93,6 +93,8 @@ In general, these pins can be used for any arbitrary funtion, just like the ones
 The ESP32-S3 has many amazing internal peripherals that can be brought out, either with simple GPIO-functions or for sensors, touch, etc.
 See the databook for all details.
 
+Hint: When using the [PoE Shield](POE.md), the relevant pins for the W5500 connection are marked in braces with "(Ethernet: ...)"
+
 |GPIO|Freely mappable|Connected To|Comment|
 |----|--------------|------------|-------|
 |GPIO0 |no|Boot button|ESP32-S3 special strapping pin|
