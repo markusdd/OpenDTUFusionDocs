@@ -2,7 +2,7 @@
 
 ![overview_PoE](pics/overview_PoE.png)
 
-The OpenDTU Fusion Shield is an extension Board specifically made to fit on top of the OpenDTU Fusion base board from v2.0 and later.
+The OpenDTU Fusion Shield is an extension Board specifically made to fit on top of the [OpenDTU Fusion](README.md) base board from v2.0 and later.
 It provides a possibility to power the Fusion board via Power over Ethernet and optionally also use an Ethernet data connection via the also included W5500 100MBit/s Ethernet chip, that connects to the ESP32-S3 on the base board via SPI. Additonally, the modbus header from the base board now leads to a screw terminal for easier install.
 
 Both the display headers for I2C and SPI (for eInk) are connected through, so display configurations can still be used.
