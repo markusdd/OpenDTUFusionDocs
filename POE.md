@@ -15,7 +15,7 @@ When raising issues, ALWAYS provide info against which hardware you have tested 
 
 ## Pin-Out
 
-Please refer to the original Fusion board [README](README.md#Pin-mapping-of-the-ESP32-S3-on-OpenDTU-Fusion-v2.x), the pin table has the pins that are used for the W5500 SPI mentioned (uses the UART and JTAG headers), the pinout for I2C and display SPI headers is identical to the Fusion board.
+Please refer to the original Fusion board [README](README.md#Pin-mapping-of-the-ESP32-S3-on-OpenDTU-Fusion-v2x), the pin table has the pins that are used for the W5500 SPI mentioned (uses the UART and JTAG headers), the pinout for I2C and display SPI headers is identical to the Fusion board.
 
 ## Using the power supply terminal block with PoE attached
 
