@@ -81,6 +81,7 @@ It can be used to place an optional 120 Ohm termination resistor if that is desi
 If you wish to write software yourself for this board or do some more advanced things a
 detailed pin-out is available at the bottom of this document.
 For all others, it is recommended to use the pre-configured build targets and device profile files in ahoy and openDTU for this board, which contain the correct pinout already.
+
 ## Pin mapping of the ESP32-S3 on OpenDTU Fusion v2.x
 
 The ESP32-S3 can map any GPIO function pretty much anywhere through firmware, but this is strictly for advanced users and developers who know what they are doing. So be warned, you are on your own from here.
@@ -133,12 +134,12 @@ See the databook for all details.
 |GPIO36|no|SCK NRF24|hardwired to Nordic RF|
 |GPIO37|no|CSN NRF24|hardwired to Nordic RF|
 |GPIO38|no|CE NRF24|hardwired to Nordic RF and Skyworks LNA|
-|GPIO39|yes|TCK|ESP32-S3 default JTAG pins|
-|GPIO40|yes|TDO|ESP32-S3 default JTAG pins|
-|GPIO41|yes|TDI|ESP32-S3 default JTAG pins|
-|GPIO42|yes|TMS|ESP32-S3 default JTAG pins|
-|GPIO43|yes|UART_TX|ESP32-S3 default serial console|
-|GPIO44|yes|UART_RX|ESP32-S3 default serial console|
+|GPIO39|yes|TCK|ESP32-S3 default JTAG pins (Ethernet: W5500 SCLK)|
+|GPIO40|yes|TDO|ESP32-S3 default JTAG pins (Ethernet: W5500 MOSI)|
+|GPIO41|yes|TDI|ESP32-S3 default JTAG pins (Ethernet: W5500 MISO)|
+|GPIO42|yes|TMS|ESP32-S3 default JTAG pins (Ethernet: W5500 CS)|
+|GPIO43|yes|UART_TX|ESP32-S3 default serial console (Ethernet: W5500 RST)|
+|GPIO44|yes|UART_RX|ESP32-S3 default serial console (Ethernet: W5500 INT)|
 |GPIO45|no|D RS485|hardwired to RS485 transceiver (strapping pin, pull-down 100k Ohm)|
 |GPIO46|no|DE RS485|hardwired to RS485 transceiver (strapping pin, pull-up 10k Ohm)|
 |GPIO47|no|IRQ NRF24|hardwired to Nordic RF|
