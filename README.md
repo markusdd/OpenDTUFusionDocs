@@ -49,6 +49,15 @@ Depending on if you bought a OpenDTU Fusion board that has OpenDTU already flash
 3) For already flashed boards go [here](FLASHED_START.md)
 4) For OTA update via the Web GUI go [here](OTA.md)
 
+## Suitable housings for DIY 3D printing:
+
+ Simple DTU Fusion Case without display by printd-solution.eu
+ https://3printd-solution.eu/Fusion-Gehaeuse#tab-Sontiges
+
+ OpenDTU Fusion + POE HAT Case by hmarius1
+ Housing for Fusion board including optional POE head and 3 external antennas 
+ https://www.thingiverse.com/thing:6371201
+
 ## Specs
 
 - Size: 5.5cm x 5.5cm, 4x M3 corner mounting holes (46.5-47mm pitch) (if you wish to design a case for this PCB yourself a 3D model step file is available [here](3d/OpenDTUFusion2.step), note that the PCB process has about 0.2mm tolerance on both hole pitch and board outline and the holes are plated, which reduces diameter by about 0.2mm compared to the step file)
