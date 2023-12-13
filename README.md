@@ -68,12 +68,13 @@ Depending on if you bought a OpenDTU Fusion board that has OpenDTU already flash
 
 ## Suitable housings for DIY 3D printing
 
- Simple DTU Fusion Case without display by printd-solution.eu
- https://3printd-solution.eu/Fusion-Gehaeuse#tab-Sontiges
+- Simple DTU Fusion Case without display by printd-solution.eu
+  https://3printd-solution.eu/Fusion-Gehaeuse#tab-Sontiges
+  (Download is a little hidden within the website under the "Other" tab in the text
 
- OpenDTU Fusion + POE HAT Case by hmarius1
- Housing for Fusion board including optional POE head and 3 external antennas 
- https://www.thingiverse.com/thing:6371201
+- OpenDTU Fusion + POE HAT Case by hmarius1
+  Housing for Fusionboard including support for the optional [PoE Shield](POE.md) and 3 external antennas
+  https://www.thingiverse.com/thing:6371201
  
 ## IMPORTANT Application Notes
 
