@@ -72,7 +72,7 @@ Depending on if you bought a OpenDTU Fusion board that has OpenDTU already flash
   https://3printd-solution.eu/Fusion-Gehaeuse#tab-Sontiges
   (Download is a little hidden within the website under the "Sonstiges" tab in the text
 
-- OpenDTU Fusion + POE HAT Case by hmarius1:
+- OpenDTU Fusion + POE HAT Case without Display by hmarius1:
   Housing for Fusionboard including support for the optional [PoE Shield](POE.md) and 3 external antennas
   https://www.thingiverse.com/thing:6371201
  
