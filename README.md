@@ -6,7 +6,7 @@ HINT: For the new PoE extension shield click [here](POE.md).
 
 ## Where to get?
 
-You can buy the OpenDTU Fusion board (and fitting 3D-printed cases when you don't want to [build your own](#Suitable%20housings%20for%20DIY%203D%20printing)) at the AllianceApps Community Shop here:
+You can buy the OpenDTU Fusion board (and fitting 3D-printed cases when you don't want to [build your own](#suitable-housings-for-diy-3d-printing)) at the AllianceApps Community Shop here:
 <https://shop.allianceapps.io/products/opendtu-fusion-community-edition>
 
 Simple 800MHz-2.6GHz wideband PCB Antennas are included and sufficient for most users. Later also a variant with external SMA-Antennas will be available if you have deep coverage requirements.
