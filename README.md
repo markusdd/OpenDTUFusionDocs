@@ -6,7 +6,7 @@ HINT: For the new PoE extension shield click [here](POE.md).
 
 ## Where to get?
 
-You can buy the OpenDTU Fusion board (and fitting 3D-printed cases when you don't want to build your own) at the AllianceApps Community Shop here:
+You can buy the OpenDTU Fusion board (and fitting 3D-printed cases when you don't want to [build your own](#Suitable%20housings%20for%20DIY%203D%20printing)) at the AllianceApps Community Shop here:
 <https://shop.allianceapps.io/products/opendtu-fusion-community-edition>
 
 Simple 800MHz-2.6GHz wideband PCB Antennas are included and sufficient for most users. Later also a variant with external SMA-Antennas will be available if you have deep coverage requirements.
@@ -49,15 +49,6 @@ Depending on if you bought a OpenDTU Fusion board that has OpenDTU already flash
 3) For already flashed boards go [here](FLASHED_START.md)
 4) For OTA update via the Web GUI go [here](OTA.md)
 
-## Suitable housings for DIY 3D printing:
-
- Simple DTU Fusion Case without display by printd-solution.eu
- https://3printd-solution.eu/Fusion-Gehaeuse#tab-Sontiges
-
- OpenDTU Fusion + POE HAT Case by hmarius1
- Housing for Fusion board including optional POE head and 3 external antennas 
- https://www.thingiverse.com/thing:6371201
-
 ## Specs
 
 - Size: 5.5cm x 5.5cm, 4x M3 corner mounting holes (46.5-47mm pitch) (if you wish to design a case for this PCB yourself a 3D model step file is available [here](3d/OpenDTUFusion2.step), note that the PCB process has about 0.2mm tolerance on both hole pitch and board outline and the holes are plated, which reduces diameter by about 0.2mm compared to the step file)
@@ -75,6 +66,15 @@ Depending on if you bought a OpenDTU Fusion board that has OpenDTU already flash
   - UART and JTAG header for classic access to flashing, monitoring console and debug (can also be used for other general purposes in software)
   - RS485 header to connect the A and B lines
 
+## Suitable housings for DIY 3D printing
+
+ Simple DTU Fusion Case without display by printd-solution.eu
+ https://3printd-solution.eu/Fusion-Gehaeuse#tab-Sontiges
+
+ OpenDTU Fusion + POE HAT Case by hmarius1
+ Housing for Fusion board including optional POE head and 3 external antennas 
+ https://www.thingiverse.com/thing:6371201
+ 
 ## IMPORTANT Application Notes
 
 In general, follow the guidelines provided by the awesome [OpenDTU](https://github.com/tbnobody/OpenDTU) and [AhoyDTU](https://github.com/lumapu/ahoy) projects.
