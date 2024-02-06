@@ -6,7 +6,7 @@ HINT: For the new PoE extension shield click [here](POE.md).
 
 ## Where to get?
 
-You can buy the OpenDTU Fusion board (and fitting 3D-printed cases when you don't want to build your own) at the AllianceApps Community Shop here:
+You can buy the OpenDTU Fusion board (and fitting 3D-printed cases when you don't want to [build your own](#suitable-housings-for-diy-3d-printing)) at the AllianceApps Community Shop here:
 <https://shop.allianceapps.io/products/opendtu-fusion-community-edition>
 
 Simple 800MHz-2.6GHz wideband PCB Antennas are included and sufficient for most users. Later also a variant with external SMA-Antennas will be available if you have deep coverage requirements.
@@ -66,6 +66,16 @@ Depending on if you bought a OpenDTU Fusion board that has OpenDTU already flash
   - UART and JTAG header for classic access to flashing, monitoring console and debug (can also be used for other general purposes in software)
   - RS485 header to connect the A and B lines
 
+## Suitable housings for DIY 3D printing
+
+- Simple DTU Fusion Case without display by printd-solution.eu
+  https://3printd-solution.eu/Fusion-Gehaeuse#tab-Sontiges
+  (Download is a little hidden within the website under the "Sonstiges" tab in the text
+
+- OpenDTU Fusion + POE HAT Case without Display by hmarius1:
+  Housing for Fusionboard including support for the optional [PoE Shield](POE.md) and 3 external antennas
+  https://www.thingiverse.com/thing:6371201
+ 
 ## IMPORTANT Application Notes
 
 In general, follow the guidelines provided by the awesome [OpenDTU](https://github.com/tbnobody/OpenDTU) and [AhoyDTU](https://github.com/lumapu/ahoy) projects.
