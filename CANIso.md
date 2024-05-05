@@ -12,7 +12,7 @@ This shield consumes the SPI Display header of the Fusion board. It can also be 
 
 On Fusion Base Board        | Stacked with PoE Shield
 :-------------------------:|:-------------------------:
-![orientation_base](pics\orientation_base.png)  |  ![orientation_PoE](pics\orientation_PoE.png)
+![orientation_base](pics/orientation_base.png)  |  ![orientation_PoE](pics/orientation_PoE.png)
 
 ## Pin-Out
 
