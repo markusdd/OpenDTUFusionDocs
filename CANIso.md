@@ -19,7 +19,7 @@ On Fusion Base Board        | Stacked with PoE Shield
 Please refer to the original Fusion board [README](README.md#Pin-mapping-of-the-ESP32-S3-on-OpenDTU-Fusion-v2x), for the ESP32-S3 GPIO mapping.
 
 In case you wish to use the shield without the Fusion base board, the connection mapping from the screw terminal to the female pin header is as follows:
-![CanIso_header_map](pics\CANIso_header_map.png)
+![CanIso_header_map](pics/CANIso_header_map.png)
 
 ## Example Device JSON for OpenDTUonBattery
 
