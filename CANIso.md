@@ -10,9 +10,9 @@ This shield consumes the SPI Display header of the Fusion board. It can also be 
 
 **IMPORTANT: Maintain the correct orientation as shown in the pictures below.Otherwise the supply pins will connect to data lines and it will not work and possibly damage GPIOs of the CAN Transceiver. Pictures show the v1 version with just 1 isolator, but the screw terminal orientation is the exact same for v2.**
 
-|with Fusio Base Board|with PoE|
-|![orientation_base](pics\orientation_base.png)|![orientation_PoE](pics\orientation_PoE.png)|
- 
+On Fusion Base Board        | Stacked with PoE Shield
+:-------------------------:|:-------------------------:
+![orientation_base](pics\orientation_base.png)  |  ![orientation_PoE](pics\orientation_PoE.png)
 
 ## Pin-Out
 
