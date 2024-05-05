@@ -1,6 +1,8 @@
 # OpenDTU Fusion Documentation
 
-HINT: For the new PoE extension shield click [here](POE.md).
+**HINT:** For the new **CAN/Iso** extension shield for use with e.g. OpenDTUonBattery click [here](CANIso.md).
+
+**HINT:** For the **PoE** extension shield click [here](POE.md).
 
 ![overview](pics/overview.png)
 
@@ -11,6 +13,9 @@ You can buy the OpenDTU Fusion board (and fitting 3D-printed cases when you don'
 
 Simple 800MHz-2.6GHz wideband PCB Antennas are included and sufficient for most users. Later also a variant with external SMA-Antennas will be available if you have deep coverage requirements.
 Meanwhile you can have this by ordering the U.FL-SMA-pigtails and Antennas yourself, you need 1x 2.4GHz for Wifi, 1x 2.4GHz for the NRF24 (for HM Series) and one 868MHz Antenna for the CMT2300A-RF (HMS/HMT series). If you only operate one type of inverter series, you can leave the not needed antenna port unpopulated.
+
+**HINT about Flash Size**: As people have requested this info because e.g. OpenDTUonBattery considers moving away from supporting 4MB Flash: The ESP32-S3 module on the Fusion will always come with at least 8MB Flash and 2MB PSRAM (8NR2).
+We might elect to supply more if parts availability demands it but we gurantee not to deliver anything below this configuration.
 
 ## Summary
 
@@ -70,10 +75,10 @@ Depending on if you bought a OpenDTU Fusion board that has OpenDTU already flash
 
 - Simple DTU Fusion Case without display by printd-solution.eu
   https://3printd-solution.eu/Fusion-Gehaeuse#tab-Sontiges
-  (Download is a little hidden within the website under the "Sonstiges" tab in the text
+  (Download is a little hidden within the website under the "Sonstiges" tab in the text)
 
 - OpenDTU Fusion + POE HAT Case without Display by hmarius1:
-  Housing for Fusionboard including support for the optional [PoE Shield](POE.md) and 3 external antennas
+  Housing for Fusion board including support for the optional [PoE Shield](POE.md) and 3 external antennas
   https://www.thingiverse.com/thing:6371201
  
 ## IMPORTANT Application Notes
@@ -103,7 +108,10 @@ In general, these pins can be used for any arbitrary funtion, just like the ones
 The ESP32-S3 has many amazing internal peripherals that can be brought out, either with simple GPIO-functions or for sensors, touch, etc.
 See the databook for all details.
 
-Hint: When using the [PoE Shield](POE.md), the relevant pins for the W5500 connection are marked in braces with "(Ethernet: ...)"
+**HINT:** When using the [PoE Shield](POE.md), the relevant pins for the W5500 connection are marked in braces with "(Ethernet: ...)"
+
+**HINT:** When using the [CAN/Iso Shield](CANIso.md), the relevant pins for the CAN/Isolator connections are marked in braces with "(CAN/Iso: ...)".
+To avoid confusion with TX/RX denomination also please look at the example device profile in the [CAN/Iso Shield](CANIso.md) documentation.
 
 |GPIO|Freely mappable|Connected To|Comment|
 |----|--------------|------------|-------|
@@ -116,12 +124,12 @@ Hint: When using the [PoE Shield](POE.md), the relevant pins for the W5500 conne
 |GPIO6 |no|SCLK CMT|hardwired to CMT2300A RF|
 |GPIO7 |no|GPIO1 CMT|hardwired to CMT2300A RF|
 |GPIO8 |no|GPIO3 CMT|hardwired to CMT2300A RF|
-|GPIO9 |yes|MOSI display|on SPI display header|
-|GPIO10|yes|SCK display|on SPI display header|
-|GPIO11|yes|CSN display|on SPI display header|
-|GPIO12|yes|DC display|on SPI display header|
-|GPIO13|yes|RST display|on SPI display header|
-|GPIO14|yes|MISO (busy) display|on SPI display header|
+|GPIO9 |yes|MOSI display|on SPI display header (CAN/Iso: Iso1 Ext RX / ESP TX)|
+|GPIO10|yes|SCK display|on SPI display header (CAN/Iso: Iso1 Ext TX / ESP RX)|
+|GPIO11|yes|CSN display|on SPI display header (CAN/Iso: Iso2 Ext TX / ESP RX)|
+|GPIO12|yes|DC display|on SPI display header (CAN/Iso: Iso2 Ext RX / ESP TX)|
+|GPIO13|yes|RST display|on SPI display header (CAN/Iso: CAN RX)|
+|GPIO14|yes|MISO (busy) display|on SPI display header (CAN/Iso: CAN TX)|
 |GPIO15|no|RE_N RS485|hardwired to RS485 transceiver|
 |GPIO16|no|R RS485|hardwired to RS485 transceiver|
 |GPIO17|no|D2 (MQTT) blue LED|connected by R12 560 Ohm resistor|
