@@ -24,7 +24,7 @@ In case you wish to use the shield without the Fusion base board, the connection
 ## Example Device JSON for OpenDTUonBattery
 
 This example configuration enables both RFs and both victron inputs.
-In case you are only using one victron you can disable the second pin set using `-1`. The TX Pin for the Victron should always be defined even if only RX is currently used to ensure a stable signal level and avoiding an unwanted shutdown of the Victron MPPT.
+In case you are only using one victron you can disable the second pin set using `-1`.
 If you are not using a CAN-enabled battery you can disable the CAN ports in the `battery` section using `-1` as well.
 
 ```json
