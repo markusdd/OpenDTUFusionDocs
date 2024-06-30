@@ -17,6 +17,8 @@ Meanwhile you can have this by ordering the U.FL-SMA-pigtails and Antennas yours
 **HINT about Flash Size**: As people have requested this info because e.g. OpenDTUonBattery considers moving away from supporting 4MB Flash: The ESP32-S3 module on the Fusion will always come with at least 8MB Flash and 2MB PSRAM (8NR2).
 We might elect to supply more if parts availability demands it but we gurantee not to deliver anything below this configuration.
 
+About board revisions see [the revisions page](REVISIONS.md).
+
 ## Summary
 
 OpenDTU Fusion is a very dense and small board which combines an
