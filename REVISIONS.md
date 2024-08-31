@@ -17,3 +17,12 @@ Production version starting in July 2024. It contains some BOM updates invisible
 This version remains compatible with all released shields.
 
 **IMPORTANT** For v2.2 you can either use the PSRAM or the NRF24. Due to an internal limitation of the Espressif WROOM-1U module, the PSRAM blocks some of the SPI Pins for internal use of the larger PSRAM. This does not matter for normal OpenDTU as it does not make use of PSRAM in the standard builds. If you do custom builds with PSRAM make sure NRF24 is disabled in your config and none of the pins are assigned to it otherwise the device will not boot!
+
+## v2.3 
+Production version starting in late 2024. The ESP32-S3 is now coming in N16R2(16MB Flash, 2MB PSRAM) configuration. Hence, it does not have the NRF24 limitation mentioned in v2.2 as the
+PSRAM does uses QSPI instead of OSPI.
+PSRAM usage has never been an advertised feature of OpenDTU Fusion and OpenDTU as a Firmware
+has it disabled by default, but as people are increasingly exploring the possibilities of the
+platform and custom builds become more common, we felt this provides the best balance between
+maxing out specs and keeping maximum compatibility.
+This version remains compatible with all released shields.
