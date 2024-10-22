@@ -5,7 +5,10 @@ OpenDTU now offers generic ESP32-s3 builds [here](<https://github.com/tbnobody/O
 
 As the name implies, for a new blank device (or if you want to change to OpenDTU from Ahoy), first erase and then flash the image marked in red which ends on factory.bin. .
 
-For that, you can use the flash tool by Espressif. Use these settings after startup:
+For that, you can use the flash tool by Espressif. Use these settings after startup
+(Alternatively you could use the web based installer:
+https://www.opendtu.solar/firmware/webinstall/
+Select "ESP32S3 with integrated USB connection"):
 
 ![FlashToolSplash](pics/FlashToolSplash.png)
 
