@@ -59,8 +59,8 @@ If you are not using a CAN-enabled battery you can disable the CAN ports in the 
             "rx": 10,
             "tx": 9,
             "rx2": 11,
-            "tx2": 12,
-        },
+            "tx2": 12
+        }
     }
 ]
 ```
