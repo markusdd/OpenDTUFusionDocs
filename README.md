@@ -1,6 +1,6 @@
 # OpenDTU Fusion Documentation
 
-**HINT:** For the new **CAN/Iso** extension shield for use with e.g. OpenDTUonBattery click [here](CANIso.md).
+**HINT:** For the new **CAN/Iso** extension shield for use with e.g. OpenDTU-OnBattery click [here](CANIso.md).
 
 **HINT:** For the **PoE** extension shield click [here](POE.md).
 
@@ -14,7 +14,7 @@ You can buy the OpenDTU Fusion board (and fitting 3D-printed cases when you don'
 Simple 800MHz-2.6GHz wideband PCB Antennas are included and sufficient for most users. Later also a variant with external SMA-Antennas will be available if you have deep coverage requirements.
 Meanwhile you can have this by ordering the U.FL-SMA-pigtails and Antennas yourself, you need 1x 2.4GHz for Wifi, 1x 2.4GHz for the NRF24 (for HM Series) and one 868MHz Antenna for the CMT2300A-RF (HMS/HMT series). If you only operate one type of inverter series, you can leave the not needed antenna port unpopulated.
 
-**HINT about Flash Size**: As people have requested this info because e.g. OpenDTUonBattery considers moving away from supporting 4MB Flash: The ESP32-S3 module on the Fusion will always come with at least 8MB Flash and 2MB PSRAM (8NR2).
+**HINT about Flash Size**: As people have requested this info because e.g. OpenDTU-OnBattery considers moving away from supporting 4MB Flash: The ESP32-S3 module on the Fusion will always come with at least 8MB Flash and 2MB PSRAM (8NR2).
 We might elect to supply more if parts availability demands it but we gurantee not to deliver anything below this configuration.
 
 About board revisions see [the revisions page](REVISIONS.md).
