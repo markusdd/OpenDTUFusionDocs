@@ -78,7 +78,7 @@ Depending on if you bought a OpenDTU Fusion board that has OpenDTU already flash
 - Simple DTU Fusion Case without display by semy3d.de
   https://semy3d.de/mediafiles/STL/Fusion%20Case.rar
 
-- OpenDTU Fusion + POE HAT Case without Display by hmarius1:
+- OpenDTU Fusion with PoE Shield Case without Display by hmarius1:
   Housing for Fusion board including support for the optional [PoE Shield](POE.md) and 3 external antennas
   https://www.thingiverse.com/thing:6371201
  
