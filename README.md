@@ -1,6 +1,6 @@
 # OpenDTU Fusion Documentation
 
-**HINT:** For the new **CAN/Iso** extension shield for use with e.g. OpenDTUonBattery click [here](CANIso.md).
+**HINT:** For the new **CAN/Iso** extension shield for use with e.g. OpenDTU-OnBattery click [here](CANIso.md).
 
 **HINT:** For the **PoE** extension shield click [here](POE.md).
 
@@ -14,8 +14,8 @@ You can buy the OpenDTU Fusion board (and fitting 3D-printed cases when you don'
 Simple 800MHz-2.6GHz wideband PCB Antennas are included and sufficient for most users. Later also a variant with external SMA-Antennas will be available if you have deep coverage requirements.
 Meanwhile you can have this by ordering the U.FL-SMA-pigtails and Antennas yourself, you need 1x 2.4GHz for Wifi, 1x 2.4GHz for the NRF24 (for HM Series) and one 868MHz Antenna for the CMT2300A-RF (HMS/HMT series). If you only operate one type of inverter series, you can leave the not needed antenna port unpopulated.
 
-**HINT about Flash Size**: As people have requested this info because e.g. OpenDTUonBattery considers moving away from supporting 4MB Flash: The ESP32-S3 module on the Fusion will always come with at least 8MB Flash and 2MB PSRAM (8NR2).
-We might elect to supply more if parts availability demands it but we gurantee not to deliver anything below this configuration.
+**HINT about Flash Size**: As people have requested this info because e.g. OpenDTU-OnBattery removed support of over-the-air updates for devices with 4MB Flash: The ESP32-S3 module on the Fusion will always come with at least 8MB Flash and 2MB PSRAM (8NR2).
+We might elect to supply more if parts availability demands it but we guarantee not to deliver anything below this configuration.
 
 About board revisions see [the revisions page](REVISIONS.md).
 
@@ -23,7 +23,7 @@ About board revisions see [the revisions page](REVISIONS.md).
 
 OpenDTU Fusion is a very dense and small board which combines an
 Espressif ESP32-S3-WROOM-1U module together with a
-Nordic NRF24LP01+, Skyworks RX2401C low noise amplifier in the 2.4GHz band and a CMT2300A 868MHz RF to provide a stable hardware base for [OpenDTU](https://github.com/tbnobody/OpenDTU) and [AhoyDTU](https://github.com/lumapu/ahoy) opensource firmwares
+Nordic NRF24LP01+, Skyworks RX2401C low noise amplifier in the 2.4GHz band and a CMT2300A 868MHz RF to provide a stable hardware base for [OpenDTU](https://github.com/tbnobody/OpenDTU), [OpenDTU-OnBattery](https://github.com/hoylabs/OpenDTU-OnBattery), and [AhoyDTU](https://github.com/lumapu/ahoy) opensource firmwares
 to monitor and control Hoymiles HM, HMS and HMT solar inverters (as well as their
 technically similar cousins like some Solenso or TSUN models).
 
@@ -78,7 +78,7 @@ Depending on if you bought a OpenDTU Fusion board that has OpenDTU already flash
 - Simple DTU Fusion Case without display by semy3d.de
   https://semy3d.de/mediafiles/STL/Fusion%20Case.rar
 
-- OpenDTU Fusion + POE HAT Case without Display by hmarius1:
+- OpenDTU Fusion with PoE Shield Case without Display by hmarius1:
   Housing for Fusion board including support for the optional [PoE Shield](POE.md) and 3 external antennas
   https://www.thingiverse.com/thing:6371201
  

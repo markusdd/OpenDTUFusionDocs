@@ -3,8 +3,8 @@
 ![overview_CANIso](pics/overview_CANIso.png)
 
 The OpenDTU Fusion CAN/Iso Shield is an extension Board specifically made to fit on top of the [OpenDTU Fusion](README.md) base board from v2.0 and later.
-It provides a possibility to connect one CAN device via a Texas Instruments SN65HVD230DR (also known as VP230) CAN Transceiver, e.g. a Pylontech Battery in a 
-OpenDTUonBattery Setup. It also has 2 Analog Devices ADUM1201ARZ-RL7 digital isolators on board which can be used to connect 2 serial inputs to the Fusion board with clean potential seperation. This is commonly used for e.g. VE.Direct connections of Victron charge controllers.
+It provides a possibility to connect one CAN device via a Texas Instruments SN65HVD230DR (also known as VP230) CAN Transceiver, e.g. a Pylontech Battery in a
+OpenDTU-OnBattery Setup. It also has 2 Analog Devices ADUM1201ARZ-RL7 digital isolators on board which can be used to connect 2 serial inputs to the Fusion board with clean potential seperation. This is commonly used for e.g. VE.Direct connections of Victron charge controllers.
 
 This shield consumes the SPI Display header of the Fusion board. It can also be stacked on top of the [PoE Shield](POE.md) if desired.
 
@@ -21,7 +21,7 @@ Please refer to the original Fusion board [README](README.md#Pin-mapping-of-the-
 In case you wish to use the shield without the Fusion base board, the connection mapping from the screw terminal to the female pin header is as follows:
 ![CanIso_header_map](pics/CANIso_header_map.png)
 
-## Example Device JSON for OpenDTUonBattery
+## Example Device JSON for OpenDTU-OnBattery
 
 This example configuration enables both RFs and both victron inputs.
 In case you are only using one victron you can disable the second pin set using `-1`.
