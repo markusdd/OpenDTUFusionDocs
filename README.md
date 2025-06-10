@@ -75,12 +75,15 @@ Depending on if you bought a OpenDTU Fusion board that has OpenDTU already flash
 
 ## Suitable housings for DIY 3D printing
 
-- Simple DTU Fusion Case without display by semy3d.de
-  https://semy3d.de/mediafiles/STL/Fusion%20Case.rar
-
 - OpenDTU Fusion with PoE Shield Case without Display by hmarius1:
   Housing for Fusion board including support for the optional [PoE Shield](POE.md) and 3 external antennas
   https://www.thingiverse.com/thing:6371201
+
+- OpenDTU Fusion PCB with 1,54″ OLED display https://www.printables.com/model/700045-case-for-opendtu-fusion-pcb-with-154-oled-display
+
+- OpenDTU Fusion PCB with 2,42″ OLED display https://www.printables.com/model/1151105-opendtu-fusion-v23-case-fur-242-display
+
+- OpenDTU Fusion PCB DinRail with 1,3″/1,54″ OLED/without display/with ISO mount https://www.thingiverse.com/thing:6839520
  
 ## IMPORTANT Application Notes
 
