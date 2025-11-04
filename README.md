@@ -131,7 +131,7 @@ To avoid confusion with TX/RX denomination also please look at the example devic
 |GPIO12|yes|DC display|on SPI display header (CAN/Iso: Iso2 Ext RX / ESP TX)|
 |GPIO13|yes|RST display|on SPI display header (CAN/Iso: CAN RX)|
 |GPIO14|yes|MISO (busy) display|on SPI display header (CAN/Iso: CAN TX)|
-|GPIO15|no|RE_N RS485|hardwired to RS485 transceiver|
+|GPIO15|no|RE_N RS485|hardwired to RS485 transceiver (pull-up 10k Ohm)|
 |GPIO16|no|R RS485|hardwired to RS485 transceiver|
 |GPIO17|no|D2 (MQTT) blue LED|connected by R12 560 Ohm resistor|
 |GPIO18|no|D3 (INV ON) white LED|connected by R13 3.3k Ohm resistor|
@@ -162,6 +162,6 @@ To avoid confusion with TX/RX denomination also please look at the example devic
 |GPIO43|yes|UART_TX|ESP32-S3 default serial console (Ethernet: W5500 RST)|
 |GPIO44|yes|UART_RX|ESP32-S3 default serial console (Ethernet: W5500 INT)|
 |GPIO45|no|D RS485|hardwired to RS485 transceiver (strapping pin, pull-down 100k Ohm)|
-|GPIO46|no|DE RS485|hardwired to RS485 transceiver (strapping pin, pull-up 10k Ohm)|
+|GPIO46|no|DE RS485|hardwired to RS485 transceiver (strapping pin, pull-down 10k Ohm)|
 |GPIO47|no|IRQ NRF24|hardwired to Nordic RF|
 |GPIO48|no|MISO NRF24|hardwired to Nordic RF|
